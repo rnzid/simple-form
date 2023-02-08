@@ -3,13 +3,13 @@
 const Button = (props) => {
 //console.log(props);
   return (
-    <button>{props.title}</button>
+    <button type="button" className="btn btn-primary">{props.title}</button>
   )
 }
 
 
-function SmallButton(props) {
-    return <button>{props.title}</button>
+function SmallButton({title,color}) {
+    return <button type="button" className="btn btn-primary" style={{color:color,backgroundColor:"green"}}>{title}</button>
 }
 
 export {
