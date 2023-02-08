@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom";
 
 export const Form = () => {
 
@@ -67,7 +68,9 @@ export const Form = () => {
                     </div>
                 </div>
                 <br />
+                <Link to="/">
                 <button type="submit" className="btn btn-primary">Submit</button>
+                </Link>
             </form>
         </div>
     )

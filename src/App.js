@@ -1,22 +1,22 @@
 import { Fragment } from 'react'; //ES6 module system
 import './App.css';
-import {Button,SmallButton} from './MyComponents/Button.js';
+
 import { Form } from './MyComponents/Form.jsx';
 import Home from './Home';
-import Navbar from './MyComponents/Navbar.jsx';
+
+import { Routes, Route, Link } from 'react-router-dom';
+import Navbar from './MyComponents/Navbar';
 
 function App() {
   return (
     <Fragment>
       <Navbar/>
-      <Home title="Home Page"/>
-      <h1 className='header'>Welcome</h1>
-      <SmallButton 
-      title="Home"
-      color="red"
-      />
-      <Button title="Add New"/>
-      <Form/>
+      <Routes>
+      <Route path="/" >
+          <Route index element={<Home />} />
+          <Route path="form" element={<Form />} />
+        </Route>
+      </Routes>
     </Fragment>
   );
 }
